@@ -6,7 +6,6 @@ const port = 4000;
 const dataFilePath = './items.json';
 
 
-// Helper function to read data from JSON file
 const readItems = () => {
 try {
 const data = fs.readFileSync(dataFilePath, 'utf-8');
@@ -18,7 +17,7 @@ return [];
 };
 
 
-// Helper function to write data to JSON file
+
 const writeItems = (items) => {
 try {
 fs.writeFileSync(dataFilePath, JSON.stringify(items, null, 2), 'utf-8');
